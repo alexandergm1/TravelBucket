@@ -3,13 +3,15 @@ from models.city import City
 from models.country import Country
 
 import repositories.country_repository as country_repository
+import repositories.city_repository as city_repository
 
 country_repository.delete_all()
 
 country1 = Country('Scotland', 'Europe', False)
 country_repository.save(country1)
 
-
+city1 = City('Inverness', country1, False)
+city_repository.save(city1)
 
 
 # result = country_repository.select()
