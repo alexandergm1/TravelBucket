@@ -21,6 +21,6 @@ class TestCity(unittest.TestCase):
         self.assertEqual(self.country1, self.city1.country)
 
 
-    # def test_can_mark_visited(self):
-    #     self.country1.mark_visited()
-    #     self.assertEqual(True, self.city1.visited)
+    def test_can_mark_visited(self):
+        self.city1.mark_visited()
+        self.assertEqual(True, self.city1.visited)
