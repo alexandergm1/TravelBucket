@@ -7,10 +7,10 @@ import repositories.city_repository as city_repository
 
 country_repository.delete_all()
 
-country1 = Country('Scotland', 'Europe', False)
+country1 = Country('Scotland', 'Europe')
 country_repository.save(country1)
 
-city1 = City('Inverness', country1, False)
+city1 = City('Inverness', country1)
 city_repository.save(city1)
 
 
