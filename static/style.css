@@ -1,10 +1,68 @@
+body {
+    margin: 0px;
+    background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-size: 100%;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+}
+
+
+
+
+
+.header_container {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+    background-color: rgba(146, 168, 209);
+}
+
+
+h1 {
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: rgb(236, 236, 236);
+    font-size: 55px;
+    margin: 0px;
+    padding: 10px;
+}
+
+
 #logo {
     height: 100px;
     width: 90px;
 }
+
+.menu {
+    flex-direction: row;
+}
+
+
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+  }
+
+
+.primary_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
 
 .primary_images {
     width: 800px;
     height: 500px;
 }
 
+.primary_images:hover {
+    border-color: cornflowerblue;
+    border-width: 5px;
+}
+
+
+footer {
+    background-color: rgba(54, 54, 54, 0.904);
+}

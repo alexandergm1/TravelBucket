@@ -13,6 +13,12 @@ country_repository.save(country1)
 city1 = City('Inverness', country1)
 city_repository.save(city1)
 
+country2 = Country('Lithuania', 'Europe')
+country_repository.save(country2)
+
+city2 = City('Veiveriai', country2)
+city_repository.save(city2)
+
 
 # result = country_repository.select()
 # print(result.__dict__)

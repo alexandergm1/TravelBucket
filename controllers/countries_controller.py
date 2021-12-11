@@ -7,6 +7,6 @@ import repositories.city_repository as city_repository
 
 countries_blueprint = Blueprint("countries", __name__)
 
-@countries_blueprint.route("/")
+@countries_blueprint.route("/home")
 def countries():
     return render_template("index.html")
