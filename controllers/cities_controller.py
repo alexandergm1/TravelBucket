@@ -6,3 +6,8 @@ import repositories.country_repository as country_repository
 import repositories.city_repository as city_repository
 
 cities_blueprint = Blueprint("cities", __name__)
+
+
+@cities_blueprint.route("/cities")
+def cities():
+    return "Test"

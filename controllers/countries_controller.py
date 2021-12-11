@@ -9,4 +9,4 @@ countries_blueprint = Blueprint("countries", __name__)
 
 @countries_blueprint.route("/")
 def countries():
-    return "Test"
+    return render_template("index.html")
