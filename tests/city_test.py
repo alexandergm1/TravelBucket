@@ -13,8 +13,8 @@ class TestCity(unittest.TestCase):
         self.assertEqual('Inverness', self.city1.name)
 
 
-    # def test_country_visited_starts_as_false(self):
-    #     self.assertEqual(False, self.city1.visited)
+    def test_city_visited_starts_as_false(self):
+        self.assertEqual(False, self.city1.visited)
 
 
     # def test_country_has_continent(self):
