@@ -17,3 +17,8 @@ class TestCountry(unittest.TestCase):
 
     def test_country_has_continent(self):
         self.assertEqual('Europe', self.country1.continent)
+
+
+    def test_can_mark_visited(self):
+        self.country1.mark_visited()
+        self.assertEqual(True, self.country1.visited)
