@@ -13,3 +13,7 @@ class TestCountry(unittest.TestCase):
 
     def test_country_visited_starts_as_false(self):
         self.assertEqual(False, self.country1.visited)
+
+
+    def test_country_has_continent(self):
+        self.assertEqual('Europe', self.country1.continent)
