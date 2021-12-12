@@ -6,11 +6,14 @@
     <tr>
         <th>Country</th>
         <th>Continent</th>
+        <th>Mark Visited</th>
     </tr>
     {% for country in countries %}
     <tr>
         <td>{{country.name}}</td>
         <td>{{country.continent}}</td>
+        <td><form class="mark_visited_form" action="/countries/visited/{{country.id}}/marknotvisited" method="POST">
+            <button class="visited-button">Mark Not Visited</button></form>
     </tr>        
     {% endfor %}
 </table>
