@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>Travelbucket - Home</title>
-</head>
-<body>
-    <header>
-        <div class="header_container">
-            <img alt="logo" src="static/img/logo.jpeg" id="logo">
-            <h1>Travelbucket</h1>
-            <nav>
-                <ul class="menu">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/countries">Countries</a></li>
-                    <li><a href="/cities">Cities</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <br>
-    <main class="main_content">
-        <div class="primary_container">
-            <a href="/countries">
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main class="main_content">
+    <div class="title_container">
+        <a href="/countries"><h2>Countries</h2></a>
+        <a href="/cities"><h2>Cities</h2></a>
+    </div>
+    <div class="primary_container">
+        <div class="image_container1">
+            <a href="/countries" class="image_links">
                 <img alt="countries_img" src="https://wallpapercave.com/wp/wp8450694.jpg" class="primary_images">
             </a>
-            <a href="/cities">
+        </div>
+        <div class="image_container2">
+            <a href="/cities" class="image_links">
                 <img alt="countries_img" src="https://wallpapercave.com/wp/81z22JT.jpg" class="primary_images">
             </a>
         </div>
-    </main>
-    <footer>
-        <p>Menu</p>
-    </footer>
-</body>
-</html>
+    </div>
+</main>
+
+{% endblock %}

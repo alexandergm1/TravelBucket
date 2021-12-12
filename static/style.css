@@ -47,14 +47,55 @@ ul {
 .primary_container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-flow: nowrap;
 }
 
 
+.title_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: URW Chancery L, cursive;
+    font-weight: bold;
+    font-size: larger;
+    letter-spacing: 3px;
+    margin-bottom: auto;
+}
+
+h2 {
+    text-decoration: underline;
+    text-decoration-color: rgba(54, 54, 54, 0.904);
+    color:rgba(54, 54, 54, 0.904);
+    overflow: hidden;
+    
+
+}
 
 .primary_images {
-    width: 800px;
-    height: 500px;
+    max-width: 80%;
+    max-height: 70%;
+    margin-left: 10%;
+}
+
+
+.image_container1 {
+    width: 50%;
+    height: 80%;
+}
+
+
+.image_container2 {
+    width: 50%;
+    height: 80%;
+}
+
+
+.image_links {
+    height: 100%;
+    width: 100%;
 }
 
 .primary_images:hover {
