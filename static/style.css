@@ -8,6 +8,10 @@ body {
     flex-direction: column;
 }
 
+main {
+    display: inline
+}
+
 
 .header_container {
     display: flex;

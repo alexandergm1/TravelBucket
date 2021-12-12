@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask import Blueprint
 from models.city import City
 from models.country import Country
@@ -26,3 +26,8 @@ def countries_visited():
 def countries_not_visited():
     countries = country_repository.select_all_not_visited()
     return render_template("countries/visited.html", countries = countries)
+
+
+@countries_blueprint.route("/countries/notvisited/<id>/markvisited", methods = ['POST'])
+def countries_mark_visited():
+    

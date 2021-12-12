@@ -71,3 +71,9 @@ def select_all_not_visited():
         country = Country(row['name'], row['continent'], row['visited'], row['id'])
         countries.append(country)
     return countries
+
+
+def mark_visited(id):
+    sql = "UPDATE countries SET visited = TRUE WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
