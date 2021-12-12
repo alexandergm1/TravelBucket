@@ -3,10 +3,10 @@ body {
     background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     background-size: 100%;
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
 }
-
-
-
 
 
 .header_container {
@@ -49,6 +49,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     flex-flow: nowrap;
+    margin-bottom: 5%;
 }
 
 
@@ -63,6 +64,7 @@ ul {
     font-size: larger;
     letter-spacing: 3px;
     margin-bottom: auto;
+    overflow: hidden;
 }
 
 h2 {
@@ -106,4 +108,24 @@ h2 {
 
 footer {
     background-color: rgba(54, 54, 54, 0.904);
+    width: 100%;
+    margin-top: auto;
+    height: 10%;
+}
+
+.footer_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer_menu > li {
+    margin: 10px
+}
+
+
+
+.footer_menu > li > a{
+    color:rgb(236, 236, 236);
+    font-size: larger;
 }
