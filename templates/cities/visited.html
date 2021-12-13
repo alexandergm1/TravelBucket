@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
+
+<table>
+    <tr>
+        <th>City</th>
+        <th>Country</th>
+        <th>Mark Visited</th>
+    </tr>
+    {% for city in cities %}
+    <tr>
+        <td>{{city.name}}</td>
+        <td>{{city.country}}</td>
+        <td><form class="mark_visited_form" action="/cities/visited/{{city.id}}/marknotvisited" method="POST">
+            <button class="visited-button">Mark Not Visited</button></form>
+    </tr>        
+    {% endfor %}
+</table>
+
+{% endblock %}

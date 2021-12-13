@@ -62,8 +62,8 @@ def select_all_visited():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(results['country.id'])
-        city = City(row['name'], country, row['visited'], row['id'])
+        country = country_repository.select(row['country_id'])
+        city = City(row['name'], country.name, row['visited'], row['id'])
         cities.append(city)
     return cities
 
@@ -75,8 +75,8 @@ def select_all_not_visited():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(results['country.id'])
-        city = City(row['name'], country, row['visited'], row['id'])
+        country = country_repository.select(row['country_id'])
+        city = City(row['name'], country.name, row['visited'], row['id'])
         cities.append(city)
     return cities
 

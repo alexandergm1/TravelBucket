@@ -21,7 +21,7 @@ def cities_visited():
 
 @cities_blueprint.route("/cities/notvisited")
 def cities_not_visited():
-    cities = country_repository.select_all_not_visited()
+    cities = city_repository.select_all_not_visited()
     return render_template("cities/not_visited.html", cities = cities)
 
 

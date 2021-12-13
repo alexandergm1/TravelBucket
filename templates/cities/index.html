@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
+
+<div class="countries_container">
+    <a href="/cities/visited"><h2>Visited</h2></a>
+    <a href="/cities/notvisited"><h2>Not Visited</h2></a>
+</div>
+
+
+{% endblock %}
