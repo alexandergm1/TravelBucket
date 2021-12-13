@@ -5,4 +5,9 @@ from models.country import Country
 import repositories.country_repository as country_repository
 import repositories.city_repository as city_repository
 
-new_entries_blueprint = Blueprint("new_entries", __name__)
+newitems_blueprint = Blueprint("newitems", __name__)
+
+
+@newitems_blueprint.route("/newitems")
+def newitems():
+    return render_template("newitems/index.html")
