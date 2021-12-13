@@ -18,4 +18,5 @@ td, th {
   table {
     border:rgba(54, 54, 54, 0.904) solid;
     width: 80%;
+    margin: 20px;
   }
