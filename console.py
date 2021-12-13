@@ -7,21 +7,66 @@ import repositories.city_repository as city_repository
 
 country_repository.delete_all()
 
-country1 = Country('Scotland', 'Europe')
-country_repository.save(country1)
+scotland = Country('Scotland', 'Europe')
+country_repository.save(scotland)
 
-city1 = City('Inverness', country1)
-city_repository.save(city1)
+scotland_city1 = City('Inverness', scotland)
+city_repository.save(scotland_city1)
 
-country2 = Country('Lithuania', 'Europe')
-country_repository.save(country2)
+lithuania = Country('Lithuania', 'Europe')
+country_repository.save(lithuania)
 
-city2 = City('Veiveriai', country2)
-city_repository.save(city2)
+lithuania_city1 = City('Veiveriai', lithuania)
+city_repository.save(lithuania_city1)
+
+spain = Country('Spain', 'Europe')
+country_repository.save(spain)
+
+germany = Country('Germany', 'Europe')
+country_repository.save(germany)
+
+france = Country('France', 'Europe')
+country_repository.save(france)
+
+northern_ireland = Country('Northern Ireland', 'Europe')
+country_repository.save(northern_ireland)
+
+ireland = Country('Ireland', 'Europe')
+country_repository.save(ireland)
+
+wales = Country('Wales', 'Europe')
+country_repository.save(wales)
+
+england = Country('England', 'Europe')
+country_repository.save(england)
+
+sweden = Country('Sweden', 'Europe')
+country_repository.save(sweden)
+
+russia = Country('Russia', 'Europe')
+country_repository.save(russia)
+
+norway = Country('Norway', 'Europe')
+country_repository.save(norway)
+
+china = Country('China', 'Europe')
+country_repository.save(china)
+
+taiwan = Country('Taiwan', 'Europe')
+country_repository.save(taiwan)
+
+india = Country('India', 'Europe')
+country_repository.save(india)
+
+zimbabwe = Country('Zimbabwe', 'Europe')
+country_repository.save(zimbabwe)
 
 
-# result = country_repository.select()
-# print(result.__dict__)
+
+
+
+
+
 
 
 pdb.set_trace()
