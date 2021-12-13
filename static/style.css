@@ -12,6 +12,9 @@ main {
     display: inline
 }
 
+.back_button {
+    margin: 20px;
+}
 
 .header_container {
     display: flex;
@@ -134,3 +137,18 @@ footer {
     font-size: larger;
 }
 
+.item_form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_form button {
+    width: 150px;
+}
+
+.item_form div {
+    margin: 20px;
+}

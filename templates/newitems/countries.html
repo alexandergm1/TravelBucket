@@ -3,14 +3,26 @@
 {% block content %}
 
 <form>
-    <input type="button" value="Back" onclick="history.back()">
+    <input type="button" value="Back" class="back_button" onclick="history.back()">
 </form>
 
-<div class="new_item_container">
-    <a href="/newitem/countries"><h2>Add a Country</h2></a>
-    <a href="/newitem/cities"><h2>Add a City</h2></a>
+<div class="form-container">
+    <form action="/countries" class="item_form" method="post">
+        <div>
+            <label for="name">Country Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name">
+        </div>
+        <div>
+            <label for="continent">Continent:</label>
+            <select id="continent" name="continent">
+                {% for continent in continents %}
+                    <option value="{{ continent }}">{{continent}}</option>
+                {% endfor %}
+              </select>
+        </div>
+        <button type="submit">Submit New Country</button>
+    </form>
 </div>
-
 
 
 {% endblock %}

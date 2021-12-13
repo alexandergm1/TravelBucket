@@ -15,7 +15,8 @@ def newitems():
 
 @newitems_blueprint.route("/newitems/countries")
 def newitems__countries():
-    return render_template("newitems/countries.html")
+    continents = ['Africa', 'North America', 'South America', 'Europe', 'Asia', 'Africa', 'Middle East', 'Oceania']
+    return render_template("newitems/countries.html", continents = continents)
 
 
 @newitems_blueprint.route("/newitems/cities")
@@ -25,13 +26,13 @@ def newitems__cities():
 
 
 
-@newitems_blueprint.route("/newitems/countries", methods=['POST'])
+@newitems_blueprint.route("/countries", methods=['POST'])
 def create_country():
     name = request.form['name']
     continent = request.form['continent']
     new_country = Country(name, continent)
     country_repository.save(new_country)
-    return redirect("newitems/countries.html")
+    return redirect("newitems/countries")
 
 
 @newitems_blueprint.route("/cities", methods=['POST'])
