@@ -49,23 +49,74 @@ country_repository.save(russia)
 norway = Country('Norway', 'Europe')
 country_repository.save(norway)
 
-china = Country('China', 'Europe')
+china = Country('China', 'Asia')
 country_repository.save(china)
 
-taiwan = Country('Taiwan', 'Europe')
+taiwan = Country('Taiwan', 'Asia')
 country_repository.save(taiwan)
 
-india = Country('India', 'Europe')
+india = Country('India', 'Asia')
 country_repository.save(india)
 
-zimbabwe = Country('Zimbabwe', 'Europe')
+zimbabwe = Country('Zimbabwe', 'Africa')
 country_repository.save(zimbabwe)
 
+ethiopia = Country('Ethiopia', 'Africa')
+country_repository.save(ethiopia)
 
+nigeria = Country('Nigeria', 'Africa')
+country_repository.save(nigeria)
 
+united_states = Country('United States of America', 'North America')
+country_repository.save(united_states)
 
+england_city1 = City('London', england)
+city_repository.save(england_city1)
 
+wales_city1 = City('Cardiff', wales)
+city_repository.save(wales_city1)
 
+ireland_city1 = City('Dublin', ireland)
+city_repository.save(ireland_city1)
+
+northern_ireland_city1 = City('Belfast', northern_ireland)
+city_repository.save(northern_ireland_city1)
+
+norway_city1 = City('Oslo', norway)
+city_repository.save(norway_city1)
+
+sweden_city1 = City('Stockholm', sweden)
+city_repository.save(sweden_city1)
+
+france_city1 = City('Paris', france)
+city_repository.save(france_city1)
+
+germany_city1 = City('Berlin', germany)
+city_repository.save(germany_city1)
+
+russia_city1 = City('Moscow', russia)
+city_repository.save(russia_city1)
+
+zimbabwe_city1 = City('Harare', zimbabwe)
+city_repository.save(zimbabwe_city1)
+
+ethiopia_city1 = City('Addis Ababa', ethiopia)
+city_repository.save(ethiopia_city1)
+
+china_city1 = City('Beijing', china)
+city_repository.save(china_city1)
+
+india_city1 = City('Delhi', india)
+city_repository.save(india_city1)
+
+united_states_city1 = City('New York', united_states)
+city_repository.save(united_states_city1)
+
+nigeria_city1 = City('Lagos', nigeria)
+city_repository.save(nigeria_city1)
+
+taiwan_city1 = City('Taipei', taiwan)
+city_repository.save(taiwan_city1)
 
 
 

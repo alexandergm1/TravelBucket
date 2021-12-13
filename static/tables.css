@@ -6,7 +6,7 @@
 td, th {
     text-align: left;
     border: solid;
-    padding: 5px;
+    padding: 10px;
   }
   
   th {
@@ -17,4 +17,5 @@ td, th {
   
   table {
     border:rgba(54, 54, 54, 0.904) solid;
+    width: 80%;
   }

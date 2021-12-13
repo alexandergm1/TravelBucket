@@ -54,3 +54,40 @@ def update(city):
     sql = "UPDATE cities SET (name, country_id, visited) VALUES (%s %s %s) WHERE id = %s"
     values = [city.name, city.country_id, city.visited, city.id]
     run_sql(sql, values)
+
+
+def select_all_visited():
+    cities = []
+    sql = "SELECT * FROM cities WHERE visited = TRUE"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repository.select(results['country.id'])
+        city = City(row['name'], country, row['visited'], row['id'])
+        cities.append(city)
+    return cities
+
+
+
+def select_all_not_visited():
+    cities = []
+    sql = "SELECT * FROM cities WHERE visited = FALSE"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repository.select(results['country.id'])
+        city = City(row['name'], country, row['visited'], row['id'])
+        cities.append(city)
+    return cities
+
+
+def mark_visited(id):
+    sql = "UPDATE cities SET visited = TRUE WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+def mark_not_visited(id):
+    sql = "UPDATE cities SET visited = FALSE WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
