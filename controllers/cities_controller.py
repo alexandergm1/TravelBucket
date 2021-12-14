@@ -71,7 +71,7 @@ def edit_page(id):
 
 
 
-@cities_blueprint.route("/cities/<id>/editcity", methods=['POST'])
+@cities_blueprint.route("/cities/<id>", methods=['POST'])
 def edit_city(id):
     name = request.form['name']
     country  = country_repository.select(request.form['country_id'])
