@@ -63,4 +63,5 @@ def show_visited_country(id):
 @countries_blueprint.route("/countries/<id>")
 def show_not_visited_country(id):
     country = country_repository.select(id)
-    return render_template('/countries/show.html', country = country)
+    cities = country_repository.cities(country)
+    return render_template('/countries/show.html', country = country, cities = cities)

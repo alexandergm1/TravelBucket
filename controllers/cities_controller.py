@@ -49,6 +49,22 @@ def delete_not_visited_city(id):
     return redirect('/cities/notvisited')
 
 
+@cities_blueprint.route("/cities/<id>")
+def show_visited_city(id):
+    city = city_repository.select(id)
+    return render_template('/cities/show.html', city = city)
+
+
+
+@cities_blueprint.route("/cities/<id>")
+def show_not_visited_city(id):
+    city = city_repository.select(id)
+    return render_template('/cities/show.html', city = city)
+
+
+@cities_blueprint.route("/cities/notvisited")
+
+
 @cities_blueprint.route("/cities/notvisited/<id>/deletenotvisited", methods=['POST'])
 def edit_not_visited_city(id):
     city_repository.delete(id)

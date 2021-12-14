@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form>
+    <input type="button" value="Back" class="back_button" onclick="history.back()">
+</form>
+
+<div class="show_container">
+    <ul>
+        <li>
+            <h2>{{city.name}}</h2>
+        </li>
+        <li>
+            Country: {{city.country.name}}
+        </li>
+        <li>
+            Seen it? {{city.visited}}
+        </li>
+    </ul>
+</div>
+
+
+{% endblock %}
