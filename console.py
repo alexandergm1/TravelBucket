@@ -119,5 +119,4 @@ taiwan_city1 = City('Taipei', taiwan)
 city_repository.save(taiwan_city1)
 
 
-
 pdb.set_trace()

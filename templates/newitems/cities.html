@@ -13,6 +13,7 @@
             <input type="text" id="name" name="name" placeholder="Name">
         </div>
         <div>
+            <label for="country_id">Country:</label>
             <select id="country_id" name="country_id">
                 {% for country in countries %}
                     <option value="{{ country.id }}">{{country.name}}</option>

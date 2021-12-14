@@ -11,6 +11,7 @@
         <th>City</th>
         <th>Country</th>
         <th>Mark Visited</th>
+        <th>Delete</th>
     </tr>
     {% for city in cities %}
     <tr>
@@ -18,6 +19,8 @@
         <td>{{city.country}}</td>
         <td><form class="mark_visited_form" action="/cities/visited/{{city.id}}/marknotvisited" method="POST">
             <button class="visited-button">Mark Not Visited</button></form>
+        <td><form class="delete_form" action="/cities/visited/{{city.id}}/deletevisited" method="POST">
+            <button class="delete-button">Delete</button></form></td>
     </tr>        
     {% endfor %}
 </table>

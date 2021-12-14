@@ -15,13 +15,11 @@
         </tr>
         {% for country in countries %}
         <tr>
-            <td>{{country.name}}</td>
-            <td>{{country.continent}}</td>
+            <td><a href="/countries/{{country.id}}">{{country.name}}</a></td>            <td>{{country.continent}}</td>
             <td><form class="mark_visited_form" action="/countries/notvisited/{{country.id}}/markvisited" method="POST">
                 <button class="visited-button">Mark Visited</button></form></td>
             <td><form class="delete_form" action="/countries/notvisited/{{country.id}}/deletenotvisited" method="POST">
                 <button class="delete-button">Delete</button></form></td>
-            </td> 
         </tr>        
         {% endfor %}
     </table>

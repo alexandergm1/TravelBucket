@@ -6,5 +6,24 @@
     <input type="button" value="Back" class="back_button" onclick="history.back()">
 </form>
 
+<div class="show_container">
+    <ul>
+        <li>
+            <h2>{{country.name}}</h2>
+        </li>
+        <li>
+            {{country.continent}}
+        </li>
+        <li>
+            {{country.visited}}
+        </li>
+        {% for city in cities %}
+        <li>
+            {{city.name}}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
 
 {% endblock %}

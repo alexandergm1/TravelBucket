@@ -152,3 +152,9 @@ footer {
 .item_form div {
     margin: 20px;
 }
+
+.show_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

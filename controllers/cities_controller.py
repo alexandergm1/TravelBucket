@@ -35,3 +35,21 @@ def cities_mark_visited(id):
 def cities_mark_not_visited(id):
     city_repository.mark_not_visited(id)
     return redirect('/cities/visited')
+
+
+@cities_blueprint.route("/cities/visited/<id>/deletevisited", methods=['POST'])
+def delete_visited_city(id):
+    city_repository.delete(id)
+    return redirect('/cities/visited')
+
+
+@cities_blueprint.route("/cities/notvisited/<id>/deletenotvisited", methods=['POST'])
+def delete_not_visited_city(id):
+    city_repository.delete(id)
+    return redirect('/cities/notvisited')
+
+
+@cities_blueprint.route("/cities/notvisited/<id>/deletenotvisited", methods=['POST'])
+def edit_not_visited_city(id):
+    city_repository.delete(id)
+    return redirect('/cities/notvisited')

@@ -50,3 +50,17 @@ def delete_visited_country(id):
 def delete_not_visited_country(id):
     country_repository.delete(id)
     return redirect('/countries/notvisited')
+
+
+@countries_blueprint.route("/countries/<id>")
+def show_visited_country(id):
+    country = country_repository.select(id)
+    cities = country_repository.cities(country)
+    return render_template('/countries/show.html', country = country, cities = cities)
+
+
+
+@countries_blueprint.route("/countries/<id>")
+def show_not_visited_country(id):
+    country = country_repository.select(id)
+    return render_template('/countries/show.html', country = country)

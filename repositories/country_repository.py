@@ -83,3 +83,16 @@ def mark_not_visited(id):
     sql = "UPDATE countries SET visited = FALSE WHERE id = %s"
     values = [id]
     run_sql(sql, values)
+
+
+def cities(country):
+    cities = []
+
+    sql = "SELECT * FROM cities WHERE country_id = %s"
+    values = [country.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        city = City(row['name'], row['visited'], row['id'])
+        cities.append(city)
+    return cities
