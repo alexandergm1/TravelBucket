@@ -65,3 +65,22 @@ def show_not_visited_country(id):
     country = country_repository.select(id)
     cities = country_repository.cities(country)
     return render_template('/countries/show.html', country = country, cities = cities)
+
+
+@countries_blueprint.route("/countries/<id>/edit")
+def edit_country_page(id):
+    country = country_repository.select(id)
+    continents = ['Africa', 'North America', 'South America', 'Europe', 'Asia', 'Africa', 'Middle East', 'Oceania']
+    return render_template('/countries/edit.html', country = country, continents = continents)
+
+
+
+@countries_blueprint.route("/countries/<id>", methods=['POST'])
+def edit_country(id):
+    country = country_repository.select(id)
+    visited = country.visited
+    name = request.form['name']
+    continent = request.form['continent']
+    updated_country = Country(name, continent, visited, id)
+    country_repository.update(updated_country)
+    return redirect('/countries')

@@ -73,8 +73,10 @@ def edit_page(id):
 
 @cities_blueprint.route("/cities/<id>", methods=['POST'])
 def edit_city(id):
+    city = city_repository.select(id)
+    visited = city.visited
     name = request.form['name']
     country  = country_repository.select(request.form['country_id'])
-    updated_city = City(name, country, id)
+    updated_city = City(name, country, visited, id)
     city_repository.update(updated_city)
     return redirect('/cities')

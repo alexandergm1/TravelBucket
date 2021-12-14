@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
+
+
+
+<div class="form-container">
+    <form action="/countries/{{country.id}}" class="item_form" method="post">
+        <div>
+            <label for="name">Country Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" value="{{country.name}}">
+        </div>
+        <div>
+            <label for="continent">Continent:</label>
+            <select id="continent" name="continent">
+                {% for continent in continents %}
+                  <option value="{{ continent }}"
+                    {% if country.continent == continent %} selected="selected"{% endif %}>
+                    {{ continent }}
+                  </option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit">Update Country</button>
+    </form>
+</div>
+
+
+{% endblock %}
