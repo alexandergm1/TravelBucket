@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form>
+    <input type="button" value="Back" onclick="history.back()">
+</form>
+
+
+
+<div class="form-container">
+    <form action="/cities" class="item_form" method="post">
+        <div>
+            <label for="name">City Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" value="{{city.name}}" required>
+        </div>
+        <div>
+            <label for="country_id">Country:</label>
+            <select id="country_id" name="country_id">
+                {% for country in countries %}
+                    <option value="{{ country.id }}">{{country.name}}</option>
+                {% endfor %}
+              </select>
+        </div>
+        <form class="edit_form" action="/cities/{{city.id}}/editcity" method="POST">
+            <button type="submit">Update City</button>
+        </form>
+    </form>
+</div>
+
+
+{% endblock %}

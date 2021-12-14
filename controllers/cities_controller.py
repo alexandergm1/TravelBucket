@@ -1,3 +1,4 @@
+from itertools import count
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.city import City
@@ -62,10 +63,18 @@ def show_not_visited_city(id):
     return render_template('/cities/show.html', city = city)
 
 
-@cities_blueprint.route("/cities/notvisited")
+@cities_blueprint.route("/cities/<id>/edit")
+def edit_page(id):
+    countries = country_repository.select_all()
+    city = city_repository.select(id)
+    return render_template('/cities/edit.html', city = city, countries = countries)
 
 
-@cities_blueprint.route("/cities/notvisited/<id>/deletenotvisited", methods=['POST'])
-def edit_not_visited_city(id):
-    city_repository.delete(id)
-    return redirect('/cities/notvisited')
+
+@cities_blueprint.route("/cities/<id>/editcity", methods=['POST'])
+def edit_city(id):
+    name = request.form['name']
+    country  = country_repository.select(request.form['country_id'])
+    updated_city = City(name, country, id)
+    city_repository.update(updated_city)
+    return redirect('/cities')
