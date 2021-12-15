@@ -26,6 +26,7 @@ td, th {
   .card_container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .card h2 {
