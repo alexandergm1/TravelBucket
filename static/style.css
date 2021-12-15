@@ -13,7 +13,7 @@ main {
 }
 
 .back_button {
-    margin: 20px;
+    margin-left: 20px;
 }
 
 .header_container {
@@ -157,4 +157,21 @@ footer {
     display: flex;
     justify-content: center;
     flex-direction: row;
+}
+
+
+
+.countries_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.subheading {
+    overflow: hidden;
+    white-space: pre-wrap;
 }

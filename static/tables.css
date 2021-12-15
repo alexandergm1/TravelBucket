@@ -84,7 +84,7 @@ td, th {
     color: white;
   }
   
-  button {
+  .button_container button {
     background: none;
     border: none;
   }

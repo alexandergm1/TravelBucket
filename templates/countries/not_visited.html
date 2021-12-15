@@ -14,7 +14,7 @@
         <p>{{country.continent}}</p>
         <div class="button_container">
             <form class="mark_visited_form" action="/countries/notvisited/{{country.id}}/markvisited" method="POST">
-            <button><i class="fas fa-times"></i></button></form>
+            <button><i class="fas fa-check"></i></button></form>
             <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit"></i></a>
             <form class="delete_form" action="/countries/notvisited/{{country.id}}/deletenotvisited" method="POST">
             <button><i class="fas fa-trash-alt"></i></button></form>
