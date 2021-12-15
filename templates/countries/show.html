@@ -9,14 +9,14 @@
     <div class="show_container">
         <div class="side_container">
             <img alt="country_pic" src="/static/img/countries/{{country.name}}.jpeg" class="show_image">
-            <p><a href="https://en.wikipedia.org/wiki/{{country.name}}"><i class="fab fa-wikipedia-w"></i></a></p>
-
+            <p class="side_link"><a href="https://en.wikipedia.org/wiki/{{country.name}}"><i class="fab fa-wikipedia-w"></i></a></p>
+        </div>
         <div class="list_items">
             <div class="show_title">
                 <h2>{{country.name}}</h2>
             </div>
             <div class="show_continent">
-                {{country.continent}}
+                <p>{{country.continent}}</p>
             </div>
             <p class="show_visited">
                 Have I been there? {% if country.visited == True %}
@@ -26,13 +26,15 @@
                     Not yet!
                 {% endif %}
             </p>
-            <ul>
-                {% for city in cities %}
-                <li class="show_city_list">{{city.name}}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit" id="edit_button"></i></a>
+            <div>
+                <h3>Cities:</h3>
+                <ul>
+                    {% for city in cities %}
+                    <li class="show_city_list">{{city.name}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit" id="edit_button"></i></a>
         </div>
     </div>
 </div>

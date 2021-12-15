@@ -74,7 +74,7 @@ ul {
     overflow: hidden;
 }
 
-h2 {
+.title_container h2 {
     text-decoration: underline;
     text-decoration-color: rgba(54, 54, 54, 0.904);
     color:rgba(54, 54, 54, 0.904);
@@ -166,7 +166,8 @@ footer {
 .subheading {
     overflow: hidden;
     white-space: pre-wrap;
-    color: darkslateblue;
+    color: rgb(56, 45, 133);
+    text-decoration: underline;
 }
 
 
