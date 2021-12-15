@@ -15,10 +15,15 @@
             Country: {{city.country.name}}
         </li>
         <li>
-            Seen it? {{city.visited}}
+            Seen it? {% if city.visited == True %}
+                Yes!
+            {% endif %}
+            {% if city.visited == False %}
+                Not yet!
+            {% endif %}
         </li>
     </ul>
-    <a href="/cities/{{city.id}}/edit"><button>Edit</button></a>
+    <a href="/cities/{{city.id}}/edit"><i class="fas fa-edit" id="edit_button"></i></a>
 </div>
 
 

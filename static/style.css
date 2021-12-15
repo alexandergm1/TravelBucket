@@ -20,7 +20,7 @@ main {
     display: flex;
     padding: 15px;
     justify-content: space-between;
-    background-color: rgba(146, 168, 209);
+    background-color: #264653;
 }
 
 
@@ -153,13 +153,6 @@ footer {
     margin: 20px;
 }
 
-.show_container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-
 
 .countries_container {
     display: flex;
@@ -174,4 +167,11 @@ footer {
 .subheading {
     overflow: hidden;
     white-space: pre-wrap;
+    color: darkslateblue;
 }
+
+
+.menu ul li {
+    color: #ef233c;
+}
+

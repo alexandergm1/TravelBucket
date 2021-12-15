@@ -7,6 +7,8 @@
 </form>
 
 <div class="show_container">
+    <div class="show_image"><img alt="country_pic" src="/static/img/countries/{{country.name}}.jpeg"></div>
+    <div class="list_items">
     <ul>
         <li>
             <h2>{{country.name}}</h2>
@@ -15,7 +17,12 @@
             {{country.continent}}
         </li>
         <li>
-            {{country.visited}}
+            Seen it? {% if country.visited == True %}
+                Yes!
+            {% endif %}
+            {% if country.visited == False %}
+                Not yet!
+            {% endif %}
         </li>
         {% for city in cities %}
         <li>
@@ -23,7 +30,8 @@
         </li>
         {% endfor %}
     </ul>
-    <a href="/countries/{{country.id}}/edit"><button>Edit</button></a>
+    <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit" id="edit_button"></i></a>
+    </div>
 </div>
 
 
