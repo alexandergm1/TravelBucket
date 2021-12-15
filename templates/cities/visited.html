@@ -10,7 +10,7 @@
     {% for city in cities %}
     
     <div class="card">
-        <div class="card_image" style="background-image: url('/static/img/{{city.name}}.jpeg');"></div>
+        <div class="card_image" style="background-image: url('/static/img/cities/{{city.name}}.jpeg');"></div>
         <h2><a href="/cities/{{city.id}}">{{city.name}}</a></h2>
         <p>{{city.country}}</p>
         <div class="button_container">
