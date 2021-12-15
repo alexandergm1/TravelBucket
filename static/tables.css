@@ -21,3 +21,46 @@ td, th {
     width: 80%;
     margin: 20px;
   }
+
+
+  .card_container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card h2 {
+    font-size: large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  a:link {
+    color: rgb(173, 210, 219);
+  }
+
+  a:visited {
+    color: rgb(173, 210, 219);
+  }
+
+  .card p {
+    font-size: medium;
+    text-align: center;
+    color: hotpink;
+  }
+
+  .card {
+    background-color: rgba(54, 53, 53, 0.767);
+    margin: 20px;
+    height: 300px;
+    width: 200px;
+    box-sizing: border-box;
+  }
+
+  .card_image {
+    height: 40%;
+    background-color: dodgerblue;
+    margin-bottom: 15px;
+    background-size: cover;
+  }
+
+  
