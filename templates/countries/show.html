@@ -5,32 +5,35 @@
 <form>
     <input type="button" value="Back" class="back_button" onclick="history.back()">
 </form>
+<div class="main_show_container">
+    <div class="show_container">
+        <div class="side_container">
+            <img alt="country_pic" src="/static/img/countries/{{country.name}}.jpeg" class="show_image">
+            <p><a href="https://en.wikipedia.org/wiki/{{country.name}}"><i class="fab fa-wikipedia-w"></i></a></p>
 
-<div class="show_container">
-    <div class="show_image"><img alt="country_pic" src="/static/img/countries/{{country.name}}.jpeg"></div>
-    <div class="list_items">
-    <ul>
-        <li>
-            <h2>{{country.name}}</h2>
-        </li>
-        <li>
-            {{country.continent}}
-        </li>
-        <li>
-            Seen it? {% if country.visited == True %}
-                Yes!
-            {% endif %}
-            {% if country.visited == False %}
-                Not yet!
-            {% endif %}
-        </li>
-        {% for city in cities %}
-        <li>
-            {{city.name}}
-        </li>
-        {% endfor %}
-    </ul>
-    <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit" id="edit_button"></i></a>
+        <div class="list_items">
+            <div class="show_title">
+                <h2>{{country.name}}</h2>
+            </div>
+            <div class="show_continent">
+                {{country.continent}}
+            </div>
+            <p class="show_visited">
+                Have I been there? {% if country.visited == True %}
+                    Yes!
+                {% endif %}
+                {% if country.visited == False %}
+                    Not yet!
+                {% endif %}
+            </p>
+            <ul>
+                {% for city in cities %}
+                <li class="show_city_list">{{city.name}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit" id="edit_button"></i></a>
+        </div>
     </div>
 </div>
 

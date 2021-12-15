@@ -114,7 +114,7 @@ h2 {
 
 
 footer {
-    background-color: rgba(54, 54, 54, 0.904);
+    background-color: #264653;
     width: 100%;
     margin-top: auto;
     height: 10%;
@@ -133,7 +133,6 @@ footer {
 
 
 .footer_menu > li > a{
-    color:rgb(236, 236, 236);
     font-size: larger;
 }
 

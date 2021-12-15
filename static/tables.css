@@ -69,22 +69,31 @@
     color: #14213d;
   }
 
+.main_show_container {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
 
-  .show_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+
+
+.show_container {
+    box-sizing: border-box;
+    box-shadow: 0 0 10px black; 
  }
 
-  .show_image img {
+  .show_image {
     height: 300px;
     width: 400px;
-    margin: 25px
+    margin: 25px;
+    border-radius: 5px;
   }
 
   .list_items {
-    flex-direction: row;
+
   }
 
-  
+  .side_container i {
+    color: black;
+    text-decoration: underline;
+  } 
