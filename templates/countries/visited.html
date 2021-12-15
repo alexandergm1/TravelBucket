@@ -13,12 +13,13 @@
     <div class="card_image" style="background-image: url('/static/img/{{country.name}}.jpeg');"></div>
     <h2><a href="/countries/{{country.id}}">{{country.name}}</a></h2>
     <p>{{country.continent}}</p>
-    <form class="mark_visited_form" action="/countries/visited/{{country.id}}/marknotvisited" method="POST">
-    <button class="visited-button">Mark Not Visited</button></form>
-    <a href="/countries/{{country.id}}/edit"><button>Edit</button></a>
-    <form class="delete_form" action="/countries/visited/{{country.id}}/deletevisited" method="POST">
-    <button class="delete-button">Delete</button></form>
-
+    <div class="button_container">
+        <form class="mark_visited_form" action="/countries/visited/{{country.id}}/marknotvisited" method="POST">
+        <button><i class="fas fa-times"></i></button></form>
+        <a href="/countries/{{country.id}}/edit"><i class="fas fa-edit"></i></a>
+        <form class="delete_form" action="/countries/visited/{{country.id}}/deletevisited" method="POST">
+        <button><i class="fas fa-trash-alt"></i></button></form>
+    </div>
 </div>
     
 

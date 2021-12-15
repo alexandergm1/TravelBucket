@@ -27,6 +27,8 @@ td, th {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
   .card h2 {
@@ -36,25 +38,27 @@ td, th {
   }
 
   a:link {
-    color: rgb(173, 210, 219);
+    color: #e9c46a;
   }
 
   a:visited {
-    color: rgb(173, 210, 219);
+    color: #e9c46a;
   }
 
   .card p {
     font-size: medium;
     text-align: center;
-    color: hotpink;
+    color: #e76f51;
   }
 
   .card {
-    background-color: rgba(54, 53, 53, 0.767);
+    background-color: #264653;
     margin: 20px;
     height: 300px;
     width: 200px;
     box-sizing: border-box;
+    
+    border-radius: 10px;
   }
 
   .card_image {
@@ -62,6 +66,25 @@ td, th {
     background-color: dodgerblue;
     margin-bottom: 15px;
     background-size: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;;
   }
 
+  .button_container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: row;
+
+  }
+
+
+  i {
+    color: white;
+  }
   
+  button {
+    background: none;
+    border: none;
+  }
