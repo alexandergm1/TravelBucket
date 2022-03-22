@@ -1,4 +1,4 @@
-# CodeClan-Solo-Project
+# TravelBucket
 
 To retrieve the files necessary to run the application, the user will need to locate
 the repository on Github and clone it 
